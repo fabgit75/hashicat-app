@@ -1,4 +1,8 @@
-# Copyright (c) HashiCorp, Inc.
+module "s3-bucket" {
+  source              = "cloudposse/s3-bucket/aws"
+  version             = "3.1.0"
+  s3_object_ownership = "BucketOwnerEnforced"
+}# Copyright (c) HashiCorp, Inc.
 
 policy "enforce-mandatory-tags" {
     enforcement_level = "soft-mandatory"
